@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.mockito.Mockito;
 
 /**
  * Created by nino on 08.05.2016.
@@ -6,8 +7,15 @@ import org.junit.Test;
 public class test {
 
     @Test
-    public void testBasil (){
+    public void testBasil () {
         assert (true);
+    }
+
+    @Test
+    public void testMock () {
+        Force force = Mockito.mock(Force.class);
+        force.awaken();
+        Mockito.verify(force).awaken();
     }
 
 }
